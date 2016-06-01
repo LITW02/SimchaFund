@@ -1,0 +1,10 @@
+c:\users\alexfriedman\documents\visual studio 2013\Projects\SimchaFund\SimchaFund.Data\bin\Debug\SimchaFund.Data.dll
+c:\users\alexfriedman\documents\visual studio 2013\Projects\SimchaFund\SimchaFund.Data\bin\Debug\SimchaFund.Data.pdb
+c:\users\alexfriedman\documents\visual studio 2013\Projects\SimchaFund\SimchaFund.Data\obj\Debug\SimchaFund.Data.dll
+c:\users\alexfriedman\documents\visual studio 2013\Projects\SimchaFund\SimchaFund.Data\obj\Debug\SimchaFund.Data.pdb
+c:\users\alexfriedman\documents\visual studio 2013\Projects\SimchaFund\SimchaFund.Data\obj\Debug\SimchaFund.Data.csprojResolveAssemblyReference.cache
+C:\Users\alexfriedman\Documents\Visual Studio 2013\Projects\SimchaFundFinal\SimchaFund.Data\bin\Debug\SimchaFund.Data.dll
+C:\Users\alexfriedman\Documents\Visual Studio 2013\Projects\SimchaFundFinal\SimchaFund.Data\bin\Debug\SimchaFund.Data.pdb
+C:\Users\alexfriedman\Documents\Visual Studio 2013\Projects\SimchaFundFinal\SimchaFund.Data\obj\Debug\SimchaFund.Data.csprojResolveAssemblyReference.cache
+C:\Users\alexfriedman\Documents\Visual Studio 2013\Projects\SimchaFundFinal\SimchaFund.Data\obj\Debug\SimchaFund.Data.dll
+C:\Users\alexfriedman\Documents\Visual Studio 2013\Projects\SimchaFundFinal\SimchaFund.Data\obj\Debug\SimchaFund.Data.pdb

@@ -1,0 +1,71 @@
+﻿@model SimchaFund.Models.ContributionsViewModel
+
+@if (!String.IsNullOrEmpty(Model.Message))
+{
+    <div class="alert alert-success">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        @Model.Message
+    </div>
+}
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <h1>Contributions for the @Model.Simcha.Name Simcha</h1>
+    </div>
+</div>
+
+<div class="row" style="margin-top: 20px;">
+    <form method="POST" action="/home/updatecontributions">
+        <input type="hidden" name="simchaId" value="@Model.Simcha.Id" />
+        <table class="table table-hover table-striped table-bordered">
+            <tr>
+                <th>Contribute</th>
+                <th>Name</th>
+                <th>Balance</th>
+                <th>Always Include</th>
+                <th>Amount</th>
+            </tr>
+            @{ int x = 0;}
+            @foreach (var contribution in Model.Contributions)
+            {
+                <input type="hidden" value="@contribution.Contributor.Id" name="contributions[@x].contributorid" />
+                <tr>
+                    <td>
+                        @if (contribution.Included)
+                        {
+                            <input class="switch" type="checkbox" value="true" checked name="contributions[@x].include"/>
+                        }
+                        else
+                        {
+                            <input class="switch" type="checkbox" value="true" name="contributions[@x].include"/>
+                        }
+                    </td>
+                    <td>
+                        @contribution.Contributor.FirstName @contribution.Contributor.LastName
+                    </td>
+                    <td>
+                        @contribution.Balance.ToString("C")
+                    </td>
+                    <td>
+                        @if (contribution.Contributor.AlwaysInclude)
+                        {
+                            <span style="font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+                        }
+                    </td>
+                    <td>
+                        <input type="text" name="contributions[@x].amount" class="form-control" value="@(contribution.Included ? contribution.Amount.ToString("#.##") : 5.ToString("#.##"))"/>
+                    </td>
+                </tr>
+                x++;
+            }
+        </table>
+        <div style="text-align: center;">
+            <button class="btn-lg btn-danger">Update</button>
+        </div>
+    </form>
+</div>
+
+@section scripts
+{
+
+    <script src="~/Scripts/contributions.js"></script>
+}
